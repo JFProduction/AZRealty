@@ -1,0 +1,54 @@
+@import 'bourbon'
+
+*
+    font-family: "Ubuntu", sans-serif
+    padding: 0
+
+body
+    margin: 0
+    padding: 0
+
+header
+    background-image: url(http://fstopgear.com/sites/default/files/santorini_greece.jpg)
+    height: 50vh
+    background-size: cover
+    color: #ffffff
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 100%
+
+    .main-header
+        background: #e19412
+        color: white
+        width: 50%
+        text-align: center
+
+    h1
+        font-family: 'Open Sans', sans-serif
+        font-size: 30px
+
+p
+    max-width: 600px
+    margin: 0 auto 20px
+
+.subject-header
+    text-align: center
+    padding: 10px
+    height: 60px
+    margin-bottom: 20px
+    color: white
+    background: #395d96
+
+.page-content
+    position: relative
+    z-index: 0
+    background: white
+    +transition()
+    +transform(scale(1))
+    +transform-origin(right center)
+    overflow: scroll
+    width: 100%
+
+// jade.js --client --no-debug filename.jade
+// to create a js file

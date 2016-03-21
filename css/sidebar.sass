@@ -1,0 +1,57 @@
+@import 'bourbon'
+
+html
+    background: #ececec
+
+.toggle
+    text-decoration: none
+    font-size: 20px
+    color: #ccd
+    cursor: pointer
+    +transition()
+    +position(fixed, 20px 0 0 20px)
+    z-index: 1
+    height: 40px
+    width: 30px
+
+.sidebar
+    +position(fixed, 0px 0 0px -190px)
+    +transition()
+    width: 120px
+    padding: 30px
+    background: #345
+    z-index: 0
+
+    ul
+        list-style: none
+        padding: 0px
+
+    li
+        color: rgba(255, 255, 255, 0.8)
+        font-family: "Ubuntu", sans-serif
+        font-size: 14px
+        margin-bottom: 16px
+        -webkit-font-smoothing: antialiased
+        cursor: pointer
+
+        &:hover
+            color: rgba(255,255,255,1)
+
+
+#sidebar-toggler
+    display: none
+
+    &:checked + .page-wrap
+
+        .sidebar
+            left: 0px
+
+        .toggle
+            left: 200px
+            color: #333
+
+        .page-content
+            // padding-left: 180px
+            +transform(scale(0.75))
+            height: 750px
+            box-shadow: 0 10px 10px rgba(0,0,0,0.1)
